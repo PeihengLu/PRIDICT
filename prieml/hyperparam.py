@@ -3,7 +3,7 @@ import itertools
 import numpy as np
 import torch
 from torch import nn
-from .utilities import ReaderWriter
+from models.PRIDICT.prieml.utilities import ReaderWriter
 
 class RNNHyperparamConfig:
     def __init__(self, 

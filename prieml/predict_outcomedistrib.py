@@ -5,17 +5,17 @@ import torch
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
-from .hyperparam import get_saved_config
-from .utilities import build_predictions_df, check_na, switch_layer_to_traineval_mode
-from .data_preprocess import PESeqProcessor
-from .dataset import create_datatensor, MinMaxNormalizer
-from .rnn.rnn import RNN_Net
+from models.PRIDICT.prieml.hyperparam import get_saved_config
+from models.PRIDICT.prieml.utilities import build_predictions_df, check_na, switch_layer_to_traineval_mode
+from models.PRIDICT.prieml.data_preprocess import PESeqProcessor
+from models.PRIDICT.prieml.dataset import create_datatensor, MinMaxNormalizer
+from models.PRIDICT.prieml.rnn.rnn import RNN_Net
 
-from .model import AnnotEmbeder_InitSeq, AnnotEmbeder_MutSeq, FeatureEmbAttention, \
+from models.PRIDICT.prieml.model import AnnotEmbeder_InitSeq, AnnotEmbeder_MutSeq, FeatureEmbAttention, \
                    MLPEmbedder, MaskGenerator, MLPDecoderDistribution
-from .hyperparam import RNNHyperparamConfig
-from .data_preprocess import Viz_PESeqs
-from .feature_importance.ig_explainer import IntegratedGradExplainer
+from models.PRIDICT.prieml.hyperparam import RNNHyperparamConfig
+from models.PRIDICT.prieml.data_preprocess import Viz_PESeqs
+from models.PRIDICT.prieml.feature_importance.ig_explainer import IntegratedGradExplainer
 
 
 class PRIEML_Model:
